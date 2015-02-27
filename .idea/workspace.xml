@@ -2,31 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0075948-3fb3-4c2e-9493-e3934094c73b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/priv/static/images/phoenix.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README_Explore.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templates/layout/application.html.eex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/config.exs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/dev.exs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/elixir_mix.ex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/elixir_mix_test.exs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/locales/en.exs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/elixir_mix/endpoint.ex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templates/page/error.html.eex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/error_view.ex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templates/page/index.html.eex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/layout_view.ex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mix.exs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templates/page/not_found.html.eex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/controllers/page_controller.ex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/page_view.ex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/priv/static/css/phoenix.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/priv/static/js/phoenix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/prod.exs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/router.ex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/test.exs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_helper.exs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/view.ex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="elixir-mix.iws" />
@@ -51,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
-              <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.046728972" vertical-offset="0" max-vertical-offset="642">
+              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -64,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README_Explore.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README_Explore.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README_Explore.md">
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1155">
@@ -85,8 +60,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/README_Explore.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -296,17 +271,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README_Explore.md">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1155">
@@ -315,6 +279,17 @@
         </state>
       </provider>
       <provider selected="true" editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.046728972" vertical-offset="0" max-vertical-offset="642">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
     </entry>
