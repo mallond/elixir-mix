@@ -1,2 +1,1 @@
-# elixir-mix
-Simple REST Demo using Elixir 
+2015-02-26-elixir-mix.
