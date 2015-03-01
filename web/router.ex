@@ -17,7 +17,6 @@ defmodule ElixirMix.Router do
 
     get "/", PageController, :index
     get "/hello", HelloController, :index
-    get "/hello2", Hello2Controller, :index
 
     resources "/cloud", UserController
 

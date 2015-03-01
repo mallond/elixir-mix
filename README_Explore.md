@@ -129,6 +129,50 @@ provides helpers to generate route paths or urls to resources
 It matches HTTP requests to controller actions, wires up realtime
 channel handlers, and defines a series of pipeline transformations
 for scoping middleware to sets of routes.</code></pre>
+
+####Hello World Example
+##### Main Router with Hello Countroler
+'defmodule ElixirMix.Router do
+```
+  scope "/", ElixirMix do
+    pipe_through :browser # Use the default browser stack
+
+    get "/", PageController, :index
+    get "/hello", HelloController, :index
+
+    resources "/cloud", UserController
+
+  end
+```
+##### Defined controller (see Main Router)
+
+```
+defmodule ElixirMix.HelloController do
+  use Phoenix.Controller
+
+  plug :action
+
+  def index(conn, _params) do
+    render conn, "index.html"
+  end
+
+end
+```
+
+##### Defined view based on named controller
+```
+defmodule ElixirMix.HelloView do
+  use ElixirMix.View
+end
+```
+
+##### Defined .views[template]
+```
+<div class="jumbotron">
+  <h2>Hello World, from Phoenix!</h2>
+</div>
+```
+
 ###The Endpoint
 handles all aspects of requests up until the beginning of our applications
 ###Controllers
