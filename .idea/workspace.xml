@@ -2,20 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0075948-3fb3-4c2e-9493-e3934094c73b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Git.ex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/util/git.ex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/controllers/hello2_controller.ex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/hello2_view.ex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/controllers/hello_controller.ex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/hello_view.ex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templates/hello/index.html.eex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templates/hello2/index.html.eex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/controllers/user_controller.ex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README_Explore.md" afterPath="$PROJECT_DIR$/README_Explore.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/elixir_mix_test.exs" afterPath="$PROJECT_DIR$/test/elixir_mix_test.exs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mix.exs" afterPath="$PROJECT_DIR$/mix.exs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mix.lock" afterPath="$PROJECT_DIR$/mix.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/router.ex" afterPath="$PROJECT_DIR$/web/router.ex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="elixir-mix.iws" />
@@ -43,23 +29,13 @@
       <file leaf-file-name="README_Explore.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README_Explore.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6035313" vertical-offset="973" max-vertical-offset="2945">
-              <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.45721924" vertical-offset="1311" max-vertical-offset="2945">
+              <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
               <folding />
             </state>
           </provider>
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".iex.exs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.iex.exs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -94,8 +70,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="158" />
-    <option name="y" value="227" />
+    <option name="x" value="115" />
+    <option name="y" value="105" />
     <option name="width" value="1061" />
     <option name="height" value="750" />
   </component>
@@ -137,20 +113,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="elixir-mix" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elixir-mix" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elixir-mix" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -238,11 +200,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="158" y="227" width="1061" height="750" extended-state="0" />
-    <editor active="true" />
+    <frame x="115" y="105" width="1061" height="750" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36710718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36563876" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30396476" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -684,8 +646,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README_Explore.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6035313" vertical-offset="973" max-vertical-offset="2945">
-          <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.45721924" vertical-offset="1311" max-vertical-offset="2945">
+          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
           <folding />
         </state>
       </provider>
