@@ -130,8 +130,8 @@ It matches HTTP requests to controller actions, wires up realtime
 channel handlers, and defines a series of pipeline transformations
 for scoping middleware to sets of routes.</code></pre>
 
->Hello World Router
-> ```
+Hello World Router
+```
 defmodule ElixirMix.Router do
   use Phoenix.Router
 
