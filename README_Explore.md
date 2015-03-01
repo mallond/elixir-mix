@@ -166,7 +166,7 @@ end
 
 #### Rest Service Example
 
->newb |>  mix phoenix.routes
+newb |>  mix phoenix.routes
 
 See Router example above. Focus onto the
 macro resources "/cloud", UserController
