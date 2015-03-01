@@ -130,6 +130,65 @@ It matches HTTP requests to controller actions, wires up realtime
 channel handlers, and defines a series of pipeline transformations
 for scoping middleware to sets of routes.</code></pre>
 
+>Hello World Router
+> ```
+defmodule ElixirMix.Router do
+  use Phoenix.Router
+
+  pipeline :browser do
+    plug :accepts, ~w(html)
+    plug :fetch_session
+    plug :fetch_flash
+    plug :protect_from_forgery
+  end
+
+  pipeline :api do
+    plug :accepts, ~w(json)
+  end
+
+  scope "/", ElixirMix do
+    pipe_through :browser # Use the default browser stack
+
+    get "/", PageController, :index
+    get "/hello", HelloController, :index
+
+    resources "/cloud", UserController
+
+  end
+
+  # Other scopes may use custom stacks.
+  # scope "/api", ElixirMix do
+  #   pipe_through :api
+  # end
+end
+
+```
+
+#### Rest Service Example
+
+>newb |>  mix phoenix.routes
+
+See Router example above. Focus onto the
+macro resources "/cloud", UserController
+
+The resource macro will create the "/cloud" get and set methods
+
+Generates the following
+```
+Generated elixir_mix.app
+ page_path  GET     /                ElixirMix.PageController.index/2
+hello_path  GET     /hello           ElixirMix.HelloController.index/2
+ user_path  GET     /cloud           ElixirMix.UserController.index/2
+ user_path  GET     /cloud/:id/edit  ElixirMix.UserController.edit/2
+ user_path  GET     /cloud/new       ElixirMix.UserController.new/2
+ user_path  GET     /cloud/:id       ElixirMix.UserController.show/2
+ user_path  POST    /cloud           ElixirMix.UserController.create/2
+ user_path  PATCH   /cloud/:id       ElixirMix.UserController.update/2
+            PUT     /cloud/:id       ElixirMix.UserController.update/2
+ user_path  DELETE  /cloud/:id       ElixirMix.UserController.delete/2
+
+```
+
 ####Hello World Example
 
 *[Recipe Card]*
@@ -137,7 +196,7 @@ for scoping middleware to sets of routes.</code></pre>
 > 1. Create a Controller web/controllers - See define the controller
 > 2. Create a view web/views - See define a view
 > 3. Create a template web/template - See define a template
-> 4. Add Controller into the router
+> 4. Add Controller into the router - See Main Router
 
 ##### Main Router with Hello Controller
 'defmodule ElixirMix.Router do
