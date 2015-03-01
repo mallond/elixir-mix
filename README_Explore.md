@@ -131,7 +131,15 @@ channel handlers, and defines a series of pipeline transformations
 for scoping middleware to sets of routes.</code></pre>
 
 ####Hello World Example
-##### Main Router with Hello Countroler
+
+*[Recipe Card]*
+
+> 1. Create a Controller web/controllers - See define the controller
+> 2. Create a view web/views - See define a view
+> 3. Create a template web/template - See define a template
+> 4. Add Controller into the router
+
+##### Main Router with Hello Controller
 'defmodule ElixirMix.Router do
 ```
   scope "/", ElixirMix do
@@ -144,8 +152,8 @@ for scoping middleware to sets of routes.</code></pre>
 
   end
 ```
-##### Defined controller (see Main Router)
-
+##### Define the controller (see Main Router)
+newb |> naming is important. The last part of the module needs to end in Controller
 ```
 defmodule ElixirMix.HelloController do
   use Phoenix.Controller
@@ -159,19 +167,20 @@ defmodule ElixirMix.HelloController do
 end
 ```
 
-##### Defined view based on named controller
+##### Define a view based on named controller
 ```
 defmodule ElixirMix.HelloView do
   use ElixirMix.View
 end
 ```
 
-##### Defined .views[template]
+##### Define a template web/templates/[name]
 ```
 <div class="jumbotron">
   <h2>Hello World, from Phoenix!</h2>
 </div>
 ```
+
 
 ###The Endpoint
 handles all aspects of requests up until the beginning of our applications
