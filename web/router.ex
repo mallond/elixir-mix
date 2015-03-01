@@ -16,6 +16,11 @@ defmodule ElixirMix.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/hello", HelloController, :index
+    get "/hello2", Hello2Controller, :index
+
+    resources "/cloud", UserController
+
   end
 
   # Other scopes may use custom stacks.
