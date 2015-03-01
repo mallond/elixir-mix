@@ -41,7 +41,7 @@ newb |> Phoenix http://www.phoenixframework.org
 # Prelude
 This is an exploratory expedition to find and understand
 this strange but seductive language called elixir.
-<img src="https://s-media-cache-ak0.pinimg.com/236x/72/7b/7d/727b7d8d8baf95a5e26a53f926503c43.jpg.jpg" align="right" width="200px" />
+<img src="https://s-media-cache-ak0.pinimg.com/236x/72/7b/7d/727b7d8d8baf95a5e26a53f926503c43.jpg" align="right" width="200px" />
 
 ### Goal
 Stand up a simple Elixir server with REST services
