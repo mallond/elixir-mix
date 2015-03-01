@@ -39,6 +39,9 @@ newb |> Phoenix http://www.phoenixframework.org
 > ####[A community driven style guide for Elixir](https://github.com/niftyn8/elixir_style_guide)
 
 # Prelude
+
+**Elixir**
+
 This is an exploratory expedition to find and understand
 this strange but seductive language called elixir.
 <img src="https://s-media-cache-ak0.pinimg.com/236x/72/7b/7d/727b7d8d8baf95a5e26a53f926503c43.jpg" align="right" width="200px" />
