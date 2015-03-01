@@ -15,7 +15,7 @@ defmodule ElixirMix.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {ElixirMix, []},
-     applications: [:phoenix, :cowboy, :httpoison]]
+     applications: [:logger, :phoenix, :cowboy, :httpoison]]
   end
 
   # Specifies your project dependencies

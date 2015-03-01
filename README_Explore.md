@@ -23,6 +23,7 @@ newb |> :dbg
 phoenix
 newb |> mix phoenix.new       # Creates Phoenix application
 newb |> mix phoenix.routes    # Prints all routes
+newb |> mix do deps.get, compile
 newb |> mix phoenix.server    # Starts applications and their servers
 environment
 newb |> Webstorm Elixir Plugin - work horse
