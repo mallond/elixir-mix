@@ -176,7 +176,7 @@ newb |>  mix phoenix.routes (Chose not to use this)
 Create - POST    /cloud           ElixirMix.CloudController.create/2
 Read   - GET     /cloud/:id       ElixirMix.CloudController.read/2
 Update - PUT     /cloud/:id       ElixirMix.CloudController.update/2
-Delete - DELETE  /cloud/:id       ElixirMix.CloudController.delete/2
+Delete - DELETE  /cloud/:id       ElixirMix.CloudControllergit .delete/2
 
 
 ####Hello World Example
