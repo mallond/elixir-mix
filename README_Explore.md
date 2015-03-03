@@ -14,12 +14,16 @@ iex
 newb |> iex - Nothing to say here
 newb |> iex.exs - iex script file
 newb |> mix.exs - Elixir script file
+newb |> mix deps.get
 newb |> iex -S mix "use it Padawan"
 newb |> AST quote do - discover code patterns
+newb |> require Logger
 newb |> Logger.debug("debug message: Make it meaningful")
 newb |> alias :dbg, as: Dbg - get rid of the erlang ":"
 newb |> :debug.tracer()
 newb |> :dbg
+newb |> import access functions/macros without fully-qualified name
+newb |> require provides macros as a mechanism
 phoenix
 newb |> mix phoenix.new       # Creates Phoenix application
 newb |> mix phoenix.routes    # Prints all routes
@@ -167,28 +171,13 @@ end
 
 #### Rest Service Example
 
-newb |>  mix phoenix.routes
+newb |>  mix phoenix.routes (Chose not to use this)
 
-See Router example above. Focus onto the
-macro resources "/cloud", UserController
+Create - POST    /cloud           ElixirMix.CloudController.create/2
+Read   - GET     /cloud/:id       ElixirMix.CloudController.read/2
+Update - PUT     /cloud/:id       ElixirMix.CloudController.update/2
+Delete - DELETE  /cloud/:id       ElixirMix.CloudController.delete/2
 
-The resource macro will create the "/cloud" get and set methods
-
-Generates the following
-```
-Generated elixir_mix.app
- page_path  GET     /                ElixirMix.PageController.index/2
-hello_path  GET     /hello           ElixirMix.HelloController.index/2
- user_path  GET     /cloud           ElixirMix.UserController.index/2
- user_path  GET     /cloud/:id/edit  ElixirMix.UserController.edit/2
- user_path  GET     /cloud/new       ElixirMix.UserController.new/2
- user_path  GET     /cloud/:id       ElixirMix.UserController.show/2
- user_path  POST    /cloud           ElixirMix.UserController.create/2
- user_path  PATCH   /cloud/:id       ElixirMix.UserController.update/2
-            PUT     /cloud/:id       ElixirMix.UserController.update/2
- user_path  DELETE  /cloud/:id       ElixirMix.UserController.delete/2
-
-```
 
 ####Hello World Example
 

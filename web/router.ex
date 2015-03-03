@@ -1,6 +1,8 @@
 defmodule ElixirMix.Router do
   use Phoenix.Router
 
+  require Logger
+
   pipeline :browser do
     plug :accepts, ~w(html)
     plug :fetch_session
@@ -13,12 +15,18 @@ defmodule ElixirMix.Router do
   end
 
   scope "/", ElixirMix do
-    pipe_through :browser # Use the default browser stack
+
+    pipe_through :api # Use the default browser stack
 
     get "/", PageController, :index
     get "/hello", HelloController, :index
 
-    resources "/cloud", UserController
+    post "/create", CloudController, :create
+    get "/read", CloudController, :read
+    put "/update", CloudController, :update
+    delete "/delete", CloudController, :delete
+
+
 
   end
 
