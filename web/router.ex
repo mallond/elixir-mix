@@ -26,12 +26,6 @@ defmodule ElixirMix.Router do
     put "/update", CloudController, :update
     delete "/delete", CloudController, :delete
 
-
-
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", ElixirMix do
-  #   pipe_through :api
-  # end
 end

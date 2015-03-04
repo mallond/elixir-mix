@@ -178,6 +178,10 @@ Read   - GET     /cloud/:id       ElixirMix.CloudController.read/2
 Update - PUT     /cloud/:id       ElixirMix.CloudController.update/2
 Delete - DELETE  /cloud/:id       ElixirMix.CloudControllergit .delete/2
 
+Cloudant
+
+curl -d '{"season": "summer", "weather": "usually warm and sunny"}' -X POST
+https://user:password@bizrez.cloudant.com/logentries/ -H "Content-Type:application/json"
 
 ####Hello World Example
 

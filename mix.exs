@@ -15,7 +15,7 @@ defmodule ElixirMix.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {ElixirMix, []},
-     applications: [:logger, :phoenix, :cowboy, :httpoison]]
+     applications: [:logger, :phoenix, :cowboy, :httpotion]]
   end
 
   # Specifies your project dependencies
@@ -24,9 +24,10 @@ defmodule ElixirMix.Mixfile do
   defp deps do
     [{:phoenix, "~> 0.9.0"},
      {:cowboy, "~> 1.0"},
-     {:httpoison, "~> 0.6"},
      {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.1"},
-     {:poison, "~> 1.3.1"}
+     {:poison, "~> 1.3.1"},
+     {:httpotion, "~> 2.0.0"},
+     {:json,   "~> 0.3.0"}
      ]
   end
 end
