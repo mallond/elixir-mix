@@ -197,6 +197,7 @@ newb |>  mix phoenix.routes (Chose not to use this)
 > ####[REST API Method Reference ](http://www.restapitutorial.com/lessons/httpmethods.html)
 
 **CREATE POST**
+
 ```
 curl -X POST -H "Content-Type: application/json; charset=UTF-8" http://localhost:4000/create -d  '{"user":"Joe","status":"new","description":"Elixir demo log entry"}'
 
@@ -205,6 +206,7 @@ result = {"ok":true,"id":"ac600e473be3bab790d6ea66f0c04564"}
 ```
 
 **READ   GET**
+
 ```
 curl http://localhost:4000/read?id=1
 
@@ -212,6 +214,7 @@ result = {"user":"joe","status":"new","ok":"read","description":"Simple CRUD Rea
 ```
 
 **UPDATE PUT**
+
 ```
 curl -X PUT -H "Content-Type: application/json" http://localhost:4000/update  -d  '{"id":"9"}'
 
@@ -219,6 +222,7 @@ result = {"ok":"update - simulation"}
 ```
 
 **DELETE DELETE**
+
 ```
 curl -X DELETE http://localhost:4000/delete?id=1
 
