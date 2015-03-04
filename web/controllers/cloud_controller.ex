@@ -5,7 +5,7 @@ defmodule ElixirMix.CloudController do
 
   plug :action
 
-  # Default service check - used for status of service only
+  # INDEX Default service check - used for status of service only
   def index(conn, _params) do
 
     conn |> put_resp_content_type "application/json"
@@ -13,7 +13,7 @@ defmodule ElixirMix.CloudController do
 
   end
 
-  #curl -X POST -H "Content-Type: application/json; charset=UTF-8" http://localhost:4000/create -d  '{"user":"david","status":"new","description":"description"}'
+  # CREATE
   def create(conn, _params) do
 
     # Submit create request and get reposonse from Cloudant
@@ -34,7 +34,7 @@ defmodule ElixirMix.CloudController do
 
   end
 
-  # curl http://localhost:4000/read?id=1
+  # READ curl http://localhost:4000/read?id=1
   def read(conn, _parms) do
 
     Logger.debug "GET read"
@@ -43,7 +43,7 @@ defmodule ElixirMix.CloudController do
 
   end
 
-  # curl -X PUT -H "Content-Type: application/json" http://localhost:4000/update  -d  '{"id":"9"}'
+  # UPDATE curl -X PUT -H "Content-Type: application/json" http://localhost:4000/update  -d  '{"id":"9"}'
   def update(conn, _params) do
 
     Logger.debug "PUT update"
@@ -52,7 +52,7 @@ defmodule ElixirMix.CloudController do
 
   end
 
-  # curl -X DELETE http://localhost:4000/delete?id=1
+  # DELETE curl -X DELETE http://localhost:4000/delete?id=1
   def delete(conn, _params) do
 
     Logger.debug "DELETE delete"
