@@ -162,18 +162,39 @@ for scoping middleware to sets of routes.</code></pre>
 
 newb |>  mix phoenix.routes (Chose not to use this)
 
-SKIP the macro and implement by hand
-Create - POST    /cloud           ElixirMix.CloudController.create/2
-Read   - GET     /cloud/:id       ElixirMix.CloudController.read/2
-Update - PUT     /cloud/:id       ElixirMix.CloudController.update/2
-Delete - DELETE  /cloud/:id       ElixirMix.CloudControllergit .delete/2
+> REST API Guidlines
+>
+> ####[REST API Method Reference ](http://www.restapitutorial.com/lessons/httpmethods.html)
 
-##### Curl for this Service
+**CREATE POST**
+```
+curl -X POST -H "Content-Type: application/json; charset=UTF-8" http://localhost:4000/create -d  '{"user":"Joe","status":"new","description":"Elixir demo log entry"}'
 
-curl -d '{"season": "summer", "weather": "usually warm and sunny"}' -X POST
-https://user:password@bizrez.cloudant.com/logentries/ -H "Content-Type:application/json"
+result = {"ok":true,"id":"ac600e473be3bab790d6ea66f0c04564"}
 
-#### Hello World Example
+```
+
+**READ   GET**
+```
+curl http://localhost:4000/read?id=1
+
+result = {"user":"joe","status":"new","ok":"read","description":"Simple CRUD Read from Elixir"}
+```
+
+**UPDATE PUT**
+```
+curl -X PUT -H "Content-Type: application/json" http://localhost:4000/update  -d  '{"id":"9"}'
+
+result = {"ok":"update - simulation"}
+```
+
+**DELETE DELETE**
+```
+curl -X DELETE http://localhost:4000/delete?id=1
+
+result = {"ok":"delete - simulation"}
+```
+
 
 
 
