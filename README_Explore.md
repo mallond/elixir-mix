@@ -43,36 +43,59 @@ newb |> Phoenix http://www.phoenixframework.org
 >
 > ####[A community driven style guide for Elixir](https://github.com/niftyn8/elixir_style_guide)
 
+> A curated list of amazingly awesome Elixir and Erlang libraries, resources and shiny things.
+> Open community of shared knowledge
+> ####[A community driven list of Elixir and Erlang Libraries ](https://github.com/h4cc/awesome-elixir#debugging)
+
 # Prelude
 
-**Elixir**
+**Elixir[erlang]**
 
-This is an exploratory expedition to find and understand
-this strange but seductive language called elixir.
+This README.md/Blog Entry is an exploratory expedition to find and understand this strange, but seductive language called elixir.
+
+I have been given a week to research and create a simple REST service.
+
+This project is by no means a finished project. However, it is my best intentions to leave a path of artifacts. Artifacts of code links, ideas, and gotchas.
+
+
+
 <img src="https://s-media-cache-ak0.pinimg.com/236x/72/7b/7d/727b7d8d8baf95a5e26a53f926503c43.jpg" align="right" width="200px" />
 
 ### Goal
-Stand up a simple Elixir server with REST services
-with simple Get, Put, Delete, Post methods. Also,
-to be included in this journey tid bits of advice and
-key knowledge points.
+- Stand up a simple Elixir REST server
+- Elixir is a Proxy to a REST service for CouchDB
+- Included tid bits of advice and key knowledge points
+- Learn Elixir
+- Learn Phoenix
+- Investigate JSON integration
+- Integrate with Cloudant BigCouchDB (REST connect)
+- Discover, Correct, and learn more Elixir
 
 
-### Design
+### Data Structure - Keep this unbelievably simple
 ```
 Data Structure: {
                  user: "string",
-                 date: dateTime,
-                 tag: "string",
-                 shortTitle: "string",
+                 status: string,
                  description: "string"
                  }
 ```
 ### Abilities
-1. List: List all Journal Entries [Get]
-2. Add: Journal Entries [Put]
-3. Update: Journal Entries [Post]
-4. Purge All: Purge all Journal Entries [Delete]
+x = Completed
+s = Simulated
+1. [x] Create - Add a Log entry [Post]
+2. [S] Read -  A Log entry [Get]
+3. [S] Update - A Log entry [Post]
+4. [S] Delete -  All: Purge all Journal Entries [Delete]
+
+
+
+### Wish LIst
+1. [] Document Model to JSON coder/decoder
+2. [] Integration module for CouchDB **** Nothing out there!
+3. [] Data mapping library
+4. [] Data validation Library
+5. [] Larger community base of developers :)
 
 
 
@@ -86,8 +109,7 @@ Data Structure: {
 -  **Plugv** A specification for composable modules in between web applications Connection adapters for different web servers in the Erlang VM
 -  **Poison** Poison is a new JSON library for Elixir focusing on wicked-fast
 -  **Ranch** Ranch is a socket acceptor pool for TCP protocols.
-
-
+-  **HTTPoison** HTTP Client module for Couch Connections
 
 
 ### Phoenix Quick Start
@@ -135,104 +157,32 @@ It matches HTTP requests to controller actions, wires up realtime
 channel handlers, and defines a series of pipeline transformations
 for scoping middleware to sets of routes.</code></pre>
 
-Hello World Router
-```
-defmodule ElixirMix.Router do
-  use Phoenix.Router
 
-  pipeline :browser do
-    plug :accepts, ~w(html)
-    plug :fetch_session
-    plug :fetch_flash
-    plug :protect_from_forgery
-  end
-
-  pipeline :api do
-    plug :accepts, ~w(json)
-  end
-
-  scope "/", ElixirMix do
-    pipe_through :browser # Use the default browser stack
-
-    get "/", PageController, :index
-    get "/hello", HelloController, :index
-
-    resources "/cloud", UserController
-
-  end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", ElixirMix do
-  #   pipe_through :api
-  # end
-end
-
-```
 
 #### Rest Service Example
 
 newb |>  mix phoenix.routes (Chose not to use this)
 
+SKIP the macro and implement by hand
 Create - POST    /cloud           ElixirMix.CloudController.create/2
 Read   - GET     /cloud/:id       ElixirMix.CloudController.read/2
 Update - PUT     /cloud/:id       ElixirMix.CloudController.update/2
 Delete - DELETE  /cloud/:id       ElixirMix.CloudControllergit .delete/2
 
-Cloudant
+##### Curl for this Service
 
 curl -d '{"season": "summer", "weather": "usually warm and sunny"}' -X POST
 https://user:password@bizrez.cloudant.com/logentries/ -H "Content-Type:application/json"
 
-####Hello World Example
+#### Hello World Example
 
-*[Recipe Card]*
 
-> 1. Create a Controller web/controllers - See define the controller
-> 2. Create a view web/views - See define a view
-> 3. Create a template web/template - See define a template
-> 4. Add Controller into the router - See Main Router
-
-##### Main Router with Hello Controller
-'defmodule ElixirMix.Router do
-```
-  scope "/", ElixirMix do
-    pipe_through :browser # Use the default browser stack
-
-    get "/", PageController, :index
-    get "/hello", HelloController, :index
-
-    resources "/cloud", UserController
-
-  end
-```
-##### Define the controller (see Main Router)
-newb |> naming is important. The last part of the module needs to end in Controller
-```
-defmodule ElixirMix.HelloController do
-  use Phoenix.Controller
-
-  plug :action
-
-  def index(conn, _params) do
-    render conn, "index.html"
-  end
-
-end
-```
 
 ##### Define a view based on named controller
-```
-defmodule ElixirMix.HelloView do
-  use ElixirMix.View
-end
-```
+
 
 ##### Define a template web/templates/[name]
-```
-<div class="jumbotron">
-  <h2>Hello World, from Phoenix!</h2>
-</div>
-```
+
 
 
 ###The Endpoint

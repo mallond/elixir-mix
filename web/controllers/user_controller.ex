@@ -4,11 +4,13 @@ defmodule ElixirMix.UserController do
   plug :action
 
 
+  # Hello Demo
   def index(conn, _params) do
 
-      conn |> put_resp_content_type("application/json")
+      conn |> put_resp_content_type "application/json"
       a = "Hello Moto - index"
       json conn, %{message: a}
+
   end
 
   def new(conn, _params) do

@@ -16,14 +16,18 @@ defmodule ElixirMix.Router do
 
   scope "/", ElixirMix do
 
+    # API REST Service
     pipe_through :api # Use the default browser stack
 
+    # Hello Moto Example
     get "/", PageController, :index
     get "/hello", HelloController, :index
+    get "/cloud", HelloController, :index
 
-    post "/create", CloudController, :create
-    get "/read", CloudController, :read
-    put "/update", CloudController, :update
+    # REST Demo - curl is needed for this demo see README
+    post   "/create", CloudController, :create
+    get    "/read", CloudController, :read
+    put    "/update", CloudController, :update
     delete "/delete", CloudController, :delete
 
   end

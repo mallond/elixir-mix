@@ -1,50 +1,57 @@
 defmodule CouchDB do
 
-require Logger
+    require Logger
 
+    # Creates
+    def create(user, status, description) do
 
-    def create(user, status, log) do
+      # Create JSON body (bypass secruity for demo)
+      uri = :noSecruity |> getServer
+      uri = uri <> "logentries/"
 
-      # Create JSON body
-      uri = getServer(:noSecruity) <> "logentries/"
-      body = "{\"user\": \"userVal\", \"status\": \"status\"}"
-      body = String.replace(body, "userVal", user)
-      body = String.replace(body, "statusVal", status)
-      body = String.replace(body, "logVal", log)
+      # JSON Document in String format - To be passed to Cloudant
+      body = "{\"user\": \"userVal\", \"status\": \"statusVal\",\"description\": \"descriptionVal\" }"
+      body = body |> String.replace "userVal", user
+      body = body |> String.replace "statusVal", status
+      body = body |> String.replace "descriptionVal", description
 
-      Logger.debug uri <> body
+      # Request Create
+      response = HTTPotion.post uri,[body: body,headers: getHeader()]
 
-      # Invoke HTTP Post Request
-      request = HTTPotion.post uri,[body: body,headers: getHeader()]
-
-      # Decode JSON Response
-      responseDecoded = JSON.decode(request.body)
-      map = elem(responseDecoded,1)
-
-      Logger.debug map["id"]
+      # On Result
+      cond do
+            response.status_code in 200..299 ->
+              responseDecoded = response.body |> JSON.decode
+            response.status_code in 400..599 ->
+              {:error, response.body}
+            true ->
+              {:error}
+      end
 
     end
 
+    # Get server setup :nosecurity
     defp getServer(:noSecruity) do
 
-       server = %Couch_Server{}
+       server = %CouchServer{}
        server = server.schema <> server.hostNoSecurity <> server.path
 
     end
 
+    # Get server setup :nosecurity
     defp getServer() do
 
-       server = %Couch_Server{}
+       server = %CouchServer{}
        server = server.schema <> server.userName <> ":" <> server.password <> server.host <> server.path
 
     end
 
+    # Get Header info
     defp getHeader() do
 
-        header = %Couch_Server{}
+        header = %CouchServer{}
         header = header.header
 
     end
-
 
 end

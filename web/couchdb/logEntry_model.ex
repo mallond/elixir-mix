@@ -2,6 +2,6 @@ defmodule LogEntry do
 
   defstruct user: "",
             status: "new",
-            log: ""
+            description: ""
 
 end
