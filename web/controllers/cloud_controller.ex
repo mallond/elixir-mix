@@ -10,12 +10,15 @@ defmodule ElixirMix.CloudController do
     json conn, %{ok: "index"}
   end
 
-  # curl -X POST -H "Content-Type: application/json; charset=UTF-8" http://localhost:4000/create -d  '{"id":"9"}'
+  # curl -X POST -H "Content-Type: application/json; charset=UTF-8" http://localhost:4000/create -d  '{"id":"9", "user":"david","status":"new","log":"new"}'
   def create(conn, _params) do
+
+    CouchDB.create(_params["user"], _params["status"], _params["log"])
 
     Logger.debug "POST Create "
     conn |> put_resp_content_type("application/json")
     json conn, %{ok: "create"}
+
   end
 
   # curl http://localhost:4000/read?id=1
