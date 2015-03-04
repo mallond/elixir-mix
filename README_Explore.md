@@ -81,8 +81,10 @@ Data Structure: {
                  }
 ```
 ### Abilities
+```
 x = Completed
 s = Simulated
+```
 1. [x] Create - Add a Log entry [Post]
 2. [S] Read -  A Log entry [Get]
 3. [S] Update - A Log entry [Post]
