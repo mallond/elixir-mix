@@ -51,7 +51,7 @@ newb |> Phoenix http://www.phoenixframework.org
 
 **Elixir[erlang]**
 
-This README.md/Blog Entry is an exploratory expedition to find and understand this strange, but seductive language called elixir.
+This README.md/Blog Entry is an exploratory expedition to understand this strange and seductive language called **"Elixir."**
 
 I have been given a week to research and create a simple REST service.
 
@@ -81,14 +81,11 @@ Data Structure: {
                  }
 ```
 ### Abilities
-```
-x = Completed
-s = Simulated
-```
+Completed Create others are simulated results (hardcoded json)
 1. [x] Create - Add a Log entry [Post]
-2. [S] Read -  A Log entry [Get]
-3. [S] Update - A Log entry [Post]
-4. [S] Delete -  All: Purge all Journal Entries [Delete]
+2. [] Read -  A Log entry [Get]
+3. [] Update - A Log entry [Post]
+4. [] Delete -  All: Purge all Journal Entries [Delete]
 
 
 
