@@ -328,9 +328,9 @@ NA
 
 ### Installation and Run
 
-git clone https://github.com/mallond/elixir-mix.git
-cd elixir-mix
-mix Phoenix.server
+1. git clone https://github.com/mallond/elixir-mix.git
+2. cd elixir-mix
+3. mix Phoenix.server
 
 Do the curl commands mentioned above [Create may need credentials]
 
