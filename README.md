@@ -150,7 +150,7 @@ Data Structure: {
 </code></pre>
 
 ###The Router
-parses incoming requests and dispatches to the correct controller/action, passing parameters as needed
+Parses incoming requests and dispatches to the correct controller/action, passing parameters as needed
 provides helpers to generate route paths or urls to resources
 <pre><code class="lang-text">The router is the main hub of any Phoenix application.
 It matches HTTP requests to controller actions, wires up realtime
@@ -188,7 +188,7 @@ defmodule ElixirMix.Router do
 end
 ```
 
-#### Rest Service Example
+#### REST Service Example
 
 newb |>  mix phoenix.routes (Chose not to use this)
 
@@ -353,6 +353,6 @@ end
 3. mix deps.get
 4. mix Phoenix.server
 
-Do the curl commands mentioned above [Create may need credentials]
+Do the curl commands mentioned above [curl CREATE method may need credentials]
 
 
