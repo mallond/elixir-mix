@@ -326,11 +326,32 @@ NA
 NA
 
 
+### Cloudant aka BigCouch Integration
+Please modify this module for given credentials
+
+web/couchdb
+
+```
+defmodule CouchServer do
+
+  # Server credentials and info
+  defstruct schema: "https://",
+            port: "4000",
+            userName: "super",
+            password: "man",
+            path:  "/",
+            host: "@bizrez.cloudant.com",
+            hostNoSecurity: "bizrez.cloudant.com",
+            header: ["Accept": "application/json","Content-type": "application/json;charset=utf-8"],
+            query: ""
+end
+```
 ### Installation and Run
 
 1. git clone https://github.com/mallond/elixir-mix.git
 2. cd elixir-mix
-3. mix Phoenix.server
+3. mix deps.get
+4. mix Phoenix.server
 
 Do the curl commands mentioned above [Create may need credentials]
 
