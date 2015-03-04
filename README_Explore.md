@@ -81,7 +81,7 @@ Data Structure: {
                  }
 ```
 ### Abilities
-Completed Create others are simulated results (hardcoded json)
+
 1. [x] Create - Add a Log entry [Post]
 2. [] Read -  A Log entry [Get]
 3. [] Update - A Log entry [Post]
