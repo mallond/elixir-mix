@@ -352,13 +352,15 @@ end
 ```
 ### Other
 ```
-Test Time
+Time Test
 
 time curl -X POST -H "Content-Type: application/json; charset=UTF-8" "http://localhost:4000/create?[1-1000]" -d  '{"user":"Joe","status":"new","description":"Elixir demo log entry"}'
 
 or
 
-time ./timetest.sh
+run a script
+
+time ./timetest_get.sh
 
 ```
 ### Installation and Run
