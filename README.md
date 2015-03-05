@@ -65,6 +65,8 @@ Have I drunken the Elixir MIX? Not completely but I do see the definite merits o
 
 I will come back and revisit this blog/README.md when I have learned and grokked more of Elixir. Maybe next time I will be a convert.
 
+For those of you who are Elixir fans -  Cheers my friends - Good stuff.
+
 
 <img src="https://s-media-cache-ak0.pinimg.com/236x/72/7b/7d/727b7d8d8baf95a5e26a53f926503c43.jpg" align="right" width="200px" />
 
