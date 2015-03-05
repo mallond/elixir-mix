@@ -57,6 +57,13 @@ I have been given a week to research and create a simple REST service.
 
 This project is by no means a finished project. However, it is my best intentions to leave a path of artifacts. Artifacts of code links, ideas, and gotchas.
 
+# Conclusion
+
+Time "flys" when you are "doing good."  This first dive into Elixir has been a good dive. The Elixir language will require  a "shift" in thinking for those indoctrinated into OOP.
+
+Have I drunken the Elixir MIX? Not completely but I do see the definite merits of this language.  Functional programming in my opinion is "Awesome." What more can I say!
+
+I will come back and revisit this blog/README.md when I have learned and grokked more of Elixir. Maybe next time I will be a convert.
 
 
 <img src="https://s-media-cache-ak0.pinimg.com/236x/72/7b/7d/727b7d8d8baf95a5e26a53f926503c43.jpg" align="right" width="200px" />
@@ -230,6 +237,27 @@ result = {"ok":"delete - simulation"}
 ```
 
 
+[] **Note:** HTTPoison example - will refactor
+```
+  # Using HttPoision Mirror
+  def mirror(conn, _params) do
+
+      Logger.debug "mirror my request"
+      url = "http://127.0.0.1:4000/read?id=1"
+      Logger.debug url
+      case HTTPoison.get(url) do
+        {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
+          json conn, body
+        {:ok, %HTTPoison.Response{status_code: 404}} ->
+          IO.puts "Not found :("
+        {:error, %HTTPoison.Error{reason: reason}} ->
+          IO.inspect reason
+      end
+
+  end
+```
+
+
 
 
 ##### Define a view based on named controller
@@ -248,6 +276,7 @@ NA
 For this demo the CREATE action has been integrated with CouchDB all others return mock JSON data
 
 [] **Note:** HTTPoison example - will refactor
+
 ```
   # Using HttPoision Mirror
   def mirror(conn, _params) do
@@ -295,6 +324,8 @@ defmodule ElixirMix.CloudController do
     conn |> put_resp_content_type "application/json"
 
     # Completed return Cloudant ID
+    # Todo: Need to refactor this portion see above HTTPoison Example -
+    # Todo: Get rid of the If else
     if completedok do
       map = response |> elem 1
       id = map["id"]
