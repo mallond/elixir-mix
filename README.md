@@ -350,6 +350,17 @@ defmodule CouchServer do
             query: ""
 end
 ```
+### Other
+```
+Test Time
+
+time curl -X POST -H "Content-Type: application/json; charset=UTF-8" "http://localhost:4000/create?[1-1000]" -d  '{"user":"Joe","status":"new","description":"Elixir demo log entry"}'
+
+or
+
+time ./timetest.sh
+
+```
 ### Installation and Run
 
 1. git clone https://github.com/mallond/elixir-mix.git
