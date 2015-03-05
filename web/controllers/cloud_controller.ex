@@ -13,8 +13,25 @@ defmodule ElixirMix.CloudController do
 
   end
 
+  # Using HttPoision Mirror
+  def mirror(conn, _params) do
+
+      Logger.debug "mirror my request"
+      url = "http://127.0.0.1:4000/read?id=1"
+      Logger.debug url
+      case HTTPoison.get(url) do
+        {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
+          json conn, body
+        {:ok, %HTTPoison.Response{status_code: 404}} ->
+          IO.puts "Not found :("
+        {:error, %HTTPoison.Error{reason: reason}} ->
+          IO.inspect reason
+      end
+
+  end
+
   # CREATE
-  def create(conn, _params) do
+  def test(conn, _params) do
 
     # Submit create request and get reposonse from Cloudant
     response = CouchDB.create _params["user"], _params["status"], _params["description"]

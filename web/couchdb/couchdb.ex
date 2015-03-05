@@ -30,8 +30,10 @@ defmodule CouchDB do
 
     end
 
+
+
     # Get server setup :nosecurity
-    defp getServer(:noSecruity) do
+    def getServer(:noSecruity) do
 
        server = %CouchServer{}
        server = server.schema <> server.hostNoSecurity <> server.path
@@ -45,6 +47,7 @@ defmodule CouchDB do
        server = server.schema <> server.userName <> ":" <> server.password <> server.host <> server.path
 
     end
+
 
     # Get Header info
     defp getHeader() do

@@ -27,6 +27,7 @@ defmodule ElixirMix.Mixfile do
      {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.1"},
      {:poison, "~> 1.3.1"},
      {:httpotion, "~> 2.0.0"},
+     {:httpoison, "~> 0.6"},
      {:json,   "~> 0.3.0"}
      ]
   end

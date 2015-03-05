@@ -247,6 +247,27 @@ NA
 
 For this demo the CREATE action has been integrated with CouchDB all others return mock JSON data
 
+[] **Note:** HTTPoison example - will refactor
+```
+  # Using HttPoision Mirror
+  def mirror(conn, _params) do
+
+      Logger.debug "mirror my request"
+      url = "http://127.0.0.1:4000/read?id=1"
+      Logger.debug url
+      case HTTPoison.get(url) do
+        {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
+          json conn, body
+        {:ok, %HTTPoison.Response{status_code: 404}} ->
+          IO.puts "Not found :("
+        {:error, %HTTPoison.Error{reason: reason}} ->
+          IO.inspect reason
+      end
+
+  end
+```
+
+
 ```
 defmodule ElixirMix.CloudController do
   use Phoenix.Controller

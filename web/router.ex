@@ -18,6 +18,7 @@ defmodule ElixirMix.Router do
     get    "/read", CloudController, :read
     put    "/update", CloudController, :update
     delete "/delete", CloudController, :delete
+    get    "/mirror", CloudController, :mirror
 
   end
 
